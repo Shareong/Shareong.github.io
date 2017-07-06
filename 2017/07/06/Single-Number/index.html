@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://shareong.com/2017/07/06/Single-Number/index.html">
 <meta property="og:site_name" content="Shareong">
 <meta property="og:description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。 解决思路这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需要一个异或(">
-<meta property="og:updated_time" content="2017-07-06T13:04:41.753Z">
+<meta property="og:updated_time" content="2017-07-06T13:06:40.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Single Number">
 <meta name="twitter:description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。 解决思路这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需要一个异或(">
@@ -172,7 +172,7 @@
       
         <p>该系列的三个题目都来自 <a href="https://leetcode.com/problems/single-number/#/description" target="_blank" rel="external">LeetCode</a>，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。</p>
 <h2 id="Single-Number-I"><a href="#Single-Number-I" class="headerlink" title="Single Number I"></a>Single Number I</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。</p>
-<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需要一个异或(xor)操作就能解决了。设A为一个整数，那么<br>                 A xor A = 0, A xor 0 = A<br>根据上面描述地性质，我们只需将数组里所有的元素进行异或，得到的结果就是要找的那个数。</p>
+<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需要一个异或(xor)操作就能解决了。设A为一个整数，那么<br>                A xor A = 0, A xor 0 = A<br>根据上面描述地性质，我们只需将数组里所有的元素进行异或，得到的结果就是要找的那个数。</p>
 <h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int ans = 0;</div><div class="line">        <span class="keyword">for</span>(int i = 0; i &lt; nums.size(); i++)</div><div class="line">            ans ^=  nums[i];</div><div class="line">        <span class="built_in">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 
       
