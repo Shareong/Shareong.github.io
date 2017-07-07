@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shareong.com">
-  <title>Archives | Shareong</title>
+  <title>如何使用MathJax引擎在博客中插入数学公式 | Shareong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shareong">
-<meta property="og:url" content="http://shareong.com/archives/index.html">
+  <meta name="description" content="Mathjax简介MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便地在浏览器中显示数学公式，不需要使用图片。目前，MathJax可以解析Latex、MathML和ASCIIMathML的标记语言。 Mathjax获取获取Mathjax最简单的方法就是通过使用分布式网络服务中的MathJax的副本，它位于cdn.mathjax.org。采用这种方式，你只需">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使用MathJax引擎在博客中插入数学公式">
+<meta property="og:url" content="http://shareong.com/2017/07/06/Mathjax-Introduction/index.html">
 <meta property="og:site_name" content="Shareong">
+<meta property="og:description" content="Mathjax简介MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便地在浏览器中显示数学公式，不需要使用图片。目前，MathJax可以解析Latex、MathML和ASCIIMathML的标记语言。 Mathjax获取获取Mathjax最简单的方法就是通过使用分布式网络服务中的MathJax的副本，它位于cdn.mathjax.org。采用这种方式，你只需">
+<meta property="og:updated_time" content="2017-07-07T02:40:36.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shareong">
+<meta name="twitter:title" content="如何使用MathJax引擎在博客中插入数学公式">
+<meta name="twitter:description" content="Mathjax简介MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便地在浏览器中显示数学公式，不需要使用图片。目前，MathJax可以解析Latex、MathML和ASCIIMathML的标记语言。 Mathjax获取获取Mathjax最简单的方法就是通过使用分布式网络服务中的MathJax的副本，它位于cdn.mathjax.org。采用这种方式，你只需">
   
     <link rel="alternative" href="/atom.xml" title="Shareong" type="application/atom+xml">
   
@@ -145,91 +149,150 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Mathjax-Introduction" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      如何使用MathJax引擎在博客中插入数学公式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/06/Mathjax-Introduction/" class="archive-article-date">
+
+        
+        <a href="/2017/07/06/Mathjax-Introduction/" class="archive-article-date">
   	<time datetime="2017-07-06T12:27:43.529Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/06/Mathjax-Introduction/">如何使用MathJax引擎在博客中插入数学公式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="Mathjax简介"><a href="#Mathjax简介" class="headerlink" title="Mathjax简介"></a>Mathjax简介</h3><p><a href="https://www.mathjax.org/" target="_blank" rel="external">MathJax</a>是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便地在浏览器中显示数学公式，不需要使用图片。目前，MathJax可以解析Latex、MathML和ASCIIMathML的标记语言。</p>
+<h3 id="Mathjax获取"><a href="#Mathjax获取" class="headerlink" title="Mathjax获取"></a>Mathjax获取</h3><p>获取Mathjax最简单的方法就是通过使用分布式网络服务中的MathJax的副本，它位于cdn.mathjax.org。采用这种方式，你只需要在编辑Markdown文档时，在正文最前面插入（注：插入的位置是在文档属性与正文之间，而不是在第一行）如下的javascript代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> async</div><div class="line">  src=<span class="string">"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="编辑LaTex公式"><a href="#编辑LaTex公式" class="headerlink" title="编辑LaTex公式"></a>编辑LaTex公式</h3><p>这里就不在赘述LaTex公式编辑的基本语法了，唯一要强调的就是MathJax中的公式排版有两种方式，Inline和Displayed。Inline表示在行内显示公式，定界符是’$…$’；Display表示单独一行显示公式，定界符是$$…$$。例如我们编辑一个行内公式’$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$’，它的LaTex内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$x</span>=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;$</div></pre></td></tr></table></figure></p>
+<p>如果我们要编辑一个行间公式，例如$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$它的LaTex内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$<span class="variable">$x</span>=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;$$</div></pre></td></tr></table></figure></p>
+<p>更多的公式编辑技巧参考：</p>
+<blockquote>
+<p><a href="http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/" target="_blank" rel="external">Mathjax与LaTex公式简介</a></p>
+</blockquote>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.com/2017/07/06/Mathjax-Introduction/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/06/Single-Number/" class="archive-article-date">
-  	<time datetime="2017-07-06T11:24:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/06/Single-Number/">Single Number</a>
-    </h1>
+  
+    <a href="/2017/07/06/Single-Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Single Number</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Coding</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -252,8 +315,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
