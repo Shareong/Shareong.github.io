@@ -147,65 +147,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Mathjax-Introduction" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/06/Mathjax-Introduction/">如何使用MathJax引擎在博客中插入数学公式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/06/Mathjax-Introduction/" class="archive-article-date">
-  	<time datetime="2017-07-06T12:27:43.529Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-<h3 id="Mathjax简介"><a href="#Mathjax简介" class="headerlink" title="Mathjax简介"></a>Mathjax简介</h3><p><a href="https://www.mathjax.org/" target="_blank" rel="external">MathJax</a>是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便地在浏览器中显示数学公式，不需要使用图片。目前，MathJax可以解析Latex、MathML和ASCIIMathML的标记语言。</p>
-<h3 id="Mathjax获取"><a href="#Mathjax获取" class="headerlink" title="Mathjax获取"></a>Mathjax获取</h3><p>获取Mathjax最简单的方法就是通过使用分布式网络服务中的MathJax的副本，它位于cdn.mathjax.org。采用这种方式，你只需要在编辑Markdown文档时，在正文最前面插入（注：插入的位置是在文档属性与正文之间，而不是在第一行）如下的javascript代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; async</div><div class="line">  src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<h3 id="编辑LaTex公式"><a href="#编辑LaTex公式" class="headerlink" title="编辑LaTex公式"></a>编辑LaTex公式</h3><p>这里就不在赘述LaTex公式编辑的基本语法了，唯一要强调的就是MathJax中的公式排版有两种方式，Inline和Displayed。Inline表示在行内显示公式，定界符是<code>\(...\)</code>；Display表示单独一行显示公式，定界符是<code>$$...$$</code>。例如我们编辑一个行内公式\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)，它的LaTex内容如下,注意需要转义<code>\</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\\(x=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;\\)</div></pre></td></tr></table></figure></p>
-<p>如果我们要编辑一个行间公式，例如$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$它的LaTex内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$<span class="variable">$x</span>=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;$$</div></pre></td></tr></table></figure></p>
-<p>更多的公式编辑技巧参考：</p>
-<blockquote>
-<p><a href="http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/" target="_blank" rel="external">Mathjax与LaTex公式简介</a></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/06/Mathjax-Introduction/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-Single-Number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -230,8 +171,10 @@
 <h2 id="Single-Number-I"><a href="#Single-Number-I" class="headerlink" title="Single Number I"></a>Single Number I</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。</p>
 <h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需要一个异或(xor)操作就能解决了。设A为一个整数，那么     </p>
 <p><center>A xor A = 0, A xor 0 = A</center><br>根据上面描述的性质，我们只需将数组里所有的元素进行异或，得到的结果就是要找的那个数。</p>
-<h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int ans = 0;</div><div class="line">        <span class="keyword">for</span>(int i = 0; i &lt; nums.size(); i++)</div><div class="line">            ans ^=  nums[i];</div><div class="line">        <span class="built_in">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-
+<h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int ans = 0;</div><div class="line">        for(int i = 0; i &lt; nums.size(); i++)</div><div class="line">            ans ^=  nums[i];</div><div class="line">        return ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="Single-Number-II"><a href="#Single-Number-II" class="headerlink" title="Single Number II"></a>Single Number II</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个整形数组，数组中的元素除了某一个数其它都出现了三次，找出这个单独出现的数。</p>
+<h3 id="解决思路-1"><a href="#解决思路-1" class="headerlink" title="解决思路"></a>解决思路</h3><p>这一题有两种复杂度为O(n)的解决方法，都是通过位操作实现。第一种是最容易理解的，创建一个整形数组<code>c[sizeof（int）]</code>，用<code>c[i]</code>去记录给定数组中第i位（二进制位）为1的元素个数，再对<code>c[i]</code>进行<code>mod3</code>操作，最后<code>c[]</code>其实就是要找的那个数的二进制展开。<br>这里着重介绍第二种方法，因为用到了状态机的思想，比较好玩，而且代码精简。用one记录处理到当前元素为止，哪些二进制位1出现了<code>1（mod3）</code>次,用two记录哪些二进制位1出现了<code>2（mod3）</code>次。处理到最后，one记录的就是最终结果，two必然为0。这里有一个难点就是状态转移，这里我用两张图来表示one和two遇到0和1的一个状态变化（注：因为都是<code>mod3</code>操作，所以就不用考虑one和two同为1的状态，而且也不会出现这种状态）。</p>
+<h3 id="代码展示-1"><a href="#代码展示-1" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int one = 0, two = 0, temp;</div><div class="line">    	for (int i = 0; i &lt; nums.size(); i++) &#123;</div><div class="line">	    	temp = one;</div><div class="line">		    one = (nums[i] ^ temp &amp; ~two) | (nums[i] &amp; ~temp &amp; ~two);</div><div class="line">		    two = (~nums[i] &amp; ~temp &amp; two) | (nums[i] &amp; temp &amp; ~two);</div><div class="line">	    &#125;</div><div class="line">	    return one;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
       
 
       
@@ -259,6 +202,76 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/06/Single-Number/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Mathjax-Introduction" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/06/Mathjax-Introduction/">如何使用MathJax引擎在博客中插入数学公式</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/06/Mathjax-Introduction/" class="archive-article-date">
+  	<time datetime="2017-07-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h3 id="Mathjax简介"><a href="#Mathjax简介" class="headerlink" title="Mathjax简介"></a>Mathjax简介</h3><p><a href="https://www.mathjax.org/" target="_blank" rel="external">MathJax</a>是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便地在浏览器中显示数学公式，不需要使用图片。目前，MathJax可以解析Latex、MathML和ASCIIMathML的标记语言。</p>
+<h3 id="Mathjax获取"><a href="#Mathjax获取" class="headerlink" title="Mathjax获取"></a>Mathjax获取</h3><p>获取Mathjax最简单的方法就是通过使用分布式网络服务中的MathJax的副本，它位于cdn.mathjax.org。采用这种方式，你只需要在编辑Markdown文档时，在正文最前面插入（注：插入的位置是在文档属性与正文之间，而不是在第一行）如下的javascript代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; async</div><div class="line">  src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="编辑LaTex公式"><a href="#编辑LaTex公式" class="headerlink" title="编辑LaTex公式"></a>编辑LaTex公式</h3><p>这里就不在赘述LaTex公式编辑的基本语法了，唯一要强调的就是MathJax中的公式排版有两种方式，Inline和Displayed。Inline表示在行内显示公式，定界符是<code>\(...\)</code>；Display表示单独一行显示公式，定界符是<code>$$...$$</code>。例如我们编辑一个行内公式\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)，它的LaTex内容如下,注意需要转义<code>\</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\\(x=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;\\)</div></pre></td></tr></table></figure></p>
+<p>如果我们要编辑一个行间公式，例如$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$它的LaTex内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$$x=\frac&#123;-b\pm\sqrt&#123;b^2-4ac&#125;&#125;&#123;2a&#125;$$</div></pre></td></tr></table></figure></p>
+<p>更多的公式编辑技巧参考：</p>
+<blockquote>
+<p><a href="http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/" target="_blank" rel="external">Mathjax与LaTex公式简介</a></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/06/Mathjax-Introduction/">展开全文 >></a>
         </p>
       
 
@@ -362,6 +375,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Coding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
             
             <div class="clearfix"></div>
