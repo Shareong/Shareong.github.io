@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://shareong.com">
   <title>Single Number | Shareong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述　　给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。 解决思路　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需">
+  <meta name="description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述　　给定一个整形数组，数组中的元素除了某一个数只出现了一次，其它的数都出现了两次，找出这个单独出现的数。 解决思路　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类">
 <meta name="keywords" content="Array,Coding">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Single Number">
 <meta property="og:url" content="http://shareong.com/2017/07/06/Single-Number/index.html">
 <meta property="og:site_name" content="Shareong">
-<meta property="og:description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述　　给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。 解决思路　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需">
+<meta property="og:description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述　　给定一个整形数组，数组中的元素除了某一个数只出现了一次，其它的数都出现了两次，找出这个单独出现的数。 解决思路　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类">
 <meta property="og:image" content="http://ospmkbjow.bkt.clouddn.com/Single_number_2.png">
-<meta property="og:updated_time" content="2017-07-07T08:53:22.844Z">
+<meta property="og:updated_time" content="2017-07-07T09:32:31.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Single Number">
-<meta name="twitter:description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述　　给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。 解决思路　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需">
+<meta name="twitter:description" content="该系列的三个题目都来自 LeetCode，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。 Single Number I问题描述　　给定一个整形数组，数组中的元素除了某一个数只出现了一次，其它的数都出现了两次，找出这个单独出现的数。 解决思路　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类">
 <meta name="twitter:image" content="http://ospmkbjow.bkt.clouddn.com/Single_number_2.png">
   
     <link rel="alternative" href="/atom.xml" title="Shareong" type="application/atom+xml">
@@ -173,16 +173,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　该系列的三个题目都来自 <a href="https://leetcode.com/problems/single-number/#/description" target="_blank" rel="external">LeetCode</a>，本文介绍了自己的几个复杂度较低的解决思路，如有不恰当的地方欢迎指出，或者你有更好的方法，期待与你讨论。</p>
-<h2 id="Single-Number-I"><a href="#Single-Number-I" class="headerlink" title="Single Number I"></a>Single Number I</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　给定一个整形数组，数组中的元素除了某一个数其它都出现了两次，找出这个单独出现的数。</p>
+<h2 id="Single-Number-I"><a href="#Single-Number-I" class="headerlink" title="Single Number I"></a>Single Number I</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　给定一个整形数组，数组中的元素除了某一个数只出现了一次，其它的数都出现了两次，找出这个单独出现的数。</p>
 <h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>　　这种题目可以扩展描述为：一个整形数组中只有一个元素出现了奇数次，其它的元素都出现了偶数次。这类问题比较简单，只需要一个异或(xor)操作就能解决了。设A为一个整数，那么     </p>
 <p><center>A xor A = 0, A xor 0 = A</center><br>　　根据上面描述的性质，我们只需将数组里所有的元素进行异或，得到的结果就是要找的那个数。</p>
 <h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int ans = 0;</div><div class="line">        for(int i = 0; i &lt; nums.size(); i++)</div><div class="line">            ans ^=  nums[i];</div><div class="line">        return ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="Single-Number-II"><a href="#Single-Number-II" class="headerlink" title="Single Number II"></a>Single Number II</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　给定一个整形数组，数组中的元素除了某一个数其它都出现了三次，找出这个单独出现的数。</p>
-<h3 id="解决思路-1"><a href="#解决思路-1" class="headerlink" title="解决思路"></a>解决思路</h3><p>　　这一题有两种复杂度为O(n)的解决方法，都是通过位操作实现。第一种是最容易理解的，创建一个整形数组c[sizeof(int)]，用c[i]去记录给定数组中第i位（二进制位）为1的元素个数，再对c[i]进行mod3操作，最后c[]其实就是要找的那个数的二进制展开。<br>　　这里着重介绍第二种方法，因为用到了状态机的思想，比较好玩，而且代码精简。用one记录处理到当前元素为止，哪些二进制位1出现了1(mod3)次,用two记录哪些二进制位1出现了2(mod3)次。处理到最后，one记录的就是最终结果，two必然为0。这里有一个难点就是状态转移，这里我用两张图来表示one和two遇到0和1的一个状态变化（注：因为都是mod3操作，所以就不用考虑one和two同为1的状态，而且也不会出现这种状态）。<br>　　<center><img src="http://ospmkbjow.bkt.clouddn.com/Single_number_2.png" alt="single number 2"></center><br>　　看到这个图是不是一下子想起了卡诺图化简呢，然后我们得到如下的两个状态转移公式：<br>　　<code>one = (Bit ^ one &amp; ~two) | (Bit &amp; ~one &amp; ~two)</code><br>　　<code>two = (~Bit &amp; ~one &amp; two) | (Bit &amp; one &amp; ~two)</code></p>
-<h3 id="代码展示-1"><a href="#代码展示-1" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int one = 0, two = 0, temp;</div><div class="line">    	for (int i = 0; i &lt; nums.size(); i++) &#123;</div><div class="line">            temp = one;</div><div class="line">            one = (nums[i] ^ temp &amp; ~two) | (nums[i] &amp; ~temp &amp; ~two);</div><div class="line">            two = (~nums[i] &amp; ~temp &amp; two) | (nums[i] &amp; temp &amp; ~two);</div><div class="line">        &#125;</div><div class="line">	    return one;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="Single-Number-II"><a href="#Single-Number-II" class="headerlink" title="Single Number II"></a>Single Number II</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　给定一个整形数组，数组中的元素除了某一个数只出现了一次，其它的数都出现了三次，找出这个单独出现的数。</p>
+<h3 id="解决思路-1"><a href="#解决思路-1" class="headerlink" title="解决思路"></a>解决思路</h3><p>　　这一题有两种复杂度为O(n)的解决方法，都是通过位操作实现。第一种是最容易理解的，创建一个整形数组c[sizeof(int)]，用c[i]去记录给定数组中第i位（二进制位）为1的元素个数，再对c[i]进行mod3操作，最后c[]其实就是要找的那个数的二进制展开。<br>　　这里着重介绍第二种方法，因为用到了状态机的思想，比较好玩，而且代码精简。用one记录处理到当前元素为止，哪些二进制位1出现了1(mod3)次，用two记录哪些二进制位1出现了2(mod3)次。处理到最后，one记录的就是最终结果，two必然为0。这里有一个难点就是状态转移，这里我用两张图来表示one和two遇到0和1的一个状态变化（注：因为都是mod3操作，所以就不用考虑one和two同为1的状态，而且也不会出现这种状态）。<br>　　<center><img src="http://ospmkbjow.bkt.clouddn.com/Single_number_2.png" alt="single number 2"></center><br>　　看到这个图是不是一下子想起了卡诺图化简呢，然后我们得到如下的两个状态转移公式：<br>　　<code>one = (Bit ^ one &amp; ~two) | (Bit &amp; ~one &amp; ~two)</code><br>　　<code>two = (~Bit &amp; ~one &amp; two) | (Bit &amp; one &amp; ~two)</code></p>
+<h3 id="代码展示-1"><a href="#代码展示-1" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int one = 0, two = 0, temp;</div><div class="line">    	for (int i = 0; i &lt; nums.size(); i++) &#123;</div><div class="line">            temp = one;   // Record the original state of one</div><div class="line">            one = (nums[i] ^ temp &amp; ~two) | (nums[i] &amp; ~temp &amp; ~two);</div><div class="line">            two = (~nums[i] &amp; ~temp &amp; two) | (nums[i] &amp; temp &amp; ~two);</div><div class="line">        &#125;</div><div class="line">	    return one;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <hr>
-
+<h2 id="Single-Number-III"><a href="#Single-Number-III" class="headerlink" title="Single Number III"></a>Single Number III</h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　给定一个整形数组，数组中的元素除了某两个数只出现了一次，其它都出现了两次，找出这个两个单独出现的数。<br>　　例如给一个数组<code>nums = [1, 2, 1, 3, 2, 5]</code>，返回<code>[3, 5]</code>。</p>
+<h3 id="解决思路-2"><a href="#解决思路-2" class="headerlink" title="解决思路"></a>解决思路</h3><p>　　本题和上面的题目一样，考察的仍然是位操作，而且同样能以O(n)的复杂度解决。本题和Single Number I 相似，解法也差不多，只不过要多绕一个弯子。首先我们想到的还是将数组所有的元素进行异或，假设A和B是我们要找的那两个数，那么异或的结果就是<code>C = A oxr B</code>。C该怎么去用呢，这就是本题的难点。我们将C二进制展开，假如低位的8个bit是<code>01001000</code>，其中第4位和第7位（从低位向高位数）为1，那就意味着A和B在第4位和第8位具有不同的bit，我们把最低位的这一bit取出来，这里就是把第4位取出来，然后用它将数组中的元素分为两类，一类就是该位的bit值为1，另一类为0，最后将这两类分别异或，就得到了我们要的结果。</p>
+<h3 id="代码展示-2"><a href="#代码展示-2" class="headerlink" title="代码展示"></a>代码展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;int&gt; singleNumber(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        int axorb = 0, l = nums.size();</div><div class="line">        for(int i = 0; i &lt; l; i++)</div><div class="line">            axorb ^= nums[i];</div><div class="line">        int lastbit = axorb ^ (axorb &amp; (axorb - 1)); // find a bit that a differs b</div><div class="line">        int a = 0, b = 0;</div><div class="line">        for(int i = 0; i &lt; l; i++)&#123;</div><div class="line">            if(nums[i] &amp; lastbit) a ^= nums[i];</div><div class="line">            else b ^= nums[i];</div><div class="line">        &#125;</div><div class="line">        return vector&lt;int&gt;&#123;a, b&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
       
 
       
@@ -392,15 +394,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Array</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Coding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
             
             <div class="clearfix"></div>
