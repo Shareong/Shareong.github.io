@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shareong.me/"/>
-  <updated>2017-07-08T06:10:35.056Z</updated>
+  <updated>2017-07-10T13:15:49.720Z</updated>
   <id>http://shareong.me/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仰望天空，云卷云舒</title>
+    <link href="http://shareong.me/stargazing-leayh.html"/>
+    <id>http://shareong.me/stargazing-leayh.html</id>
+    <published>2017-07-09T16:00:00.000Z</published>
+    <updated>2017-07-10T13:15:49.720Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ospmkbjow.bkt.clouddn.com/leayh.jpg" alt="leayh"></p>
+<p><center><br>今天前，辛苦并快乐着<br>闲步、听歌、耕耘书行<br>今天前，关心朋友和亲人<br>我有一扇窗户，仰望天空，云卷云舒<br>今天前，为每一次不幸祷告<br>祈愿以后我的幸福<br>仁慈的父告诉我的<br>我将告诉每一个不幸的人<br>为每一捧风每一寸彩霞找一个惬意的归宿<br>不相识的情侣，我也会祝福<br>愿你们执手偕老<br>愿你们有才人功成名就<br>愿你们在阳光下沐浴幸福<br>今天前，仰望天空，云卷云舒<br>这样<br>怀着希望<br>明天，面朝大海，春暖花开<br></center></p>
+<hr>
+<p>这是我中学时代模仿海子《面朝大海，春暖花开》写的一篇日志，愿当时的那颗赤子之心能够陪伴我继续前行。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ospmkbjow.bkt.clouddn.com/leayh.jpg&quot; alt=&quot;leayh&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;br&gt;今天前，辛苦并快乐着&lt;br&gt;闲步、听歌、耕耘书行&lt;br&gt;今天前，关心朋友和亲人&lt;br&gt;我有一扇窗户，仰
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://shareong.me/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>Single Number</title>
