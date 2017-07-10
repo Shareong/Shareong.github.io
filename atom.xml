@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://shareong.com/"/>
+  <link href="http://shareong.me/"/>
   <updated>2017-07-08T06:10:35.056Z</updated>
-  <id>http://shareong.com/</id>
+  <id>http://shareong.me/</id>
   
   <author>
     <name>Shareong</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Single Number</title>
-    <link href="http://shareong.com/2017/07/06/Single-Number/"/>
-    <id>http://shareong.com/2017/07/06/Single-Number/</id>
+    <link href="http://shareong.me/2017/07/06/Single-Number/"/>
+    <id>http://shareong.me/2017/07/06/Single-Number/</id>
     <published>2017-07-06T11:24:49.000Z</published>
     <updated>2017-07-08T06:10:35.056Z</updated>
     
@@ -43,16 +43,16 @@
     </summary>
     
     
-      <category term="Array" scheme="http://shareong.com/tags/Array/"/>
+      <category term="Array" scheme="http://shareong.me/tags/Array/"/>
     
-      <category term="Coding" scheme="http://shareong.com/tags/Coding/"/>
+      <category term="Coding" scheme="http://shareong.me/tags/Coding/"/>
     
   </entry>
   
   <entry>
     <title>如何使用MathJax引擎在博客中插入数学公式</title>
-    <link href="http://shareong.com/2017/07/06/Mathjax-Introduction/"/>
-    <id>http://shareong.com/2017/07/06/Mathjax-Introduction/</id>
+    <link href="http://shareong.me/2017/07/06/Mathjax-Introduction/"/>
+    <id>http://shareong.me/2017/07/06/Mathjax-Introduction/</id>
     <published>2017-07-05T16:00:00.000Z</published>
     <updated>2017-07-07T13:06:05.297Z</updated>
     
@@ -80,7 +80,7 @@
     </summary>
     
     
-      <category term="教程" scheme="http://shareong.com/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://shareong.me/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
