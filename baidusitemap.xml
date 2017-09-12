@@ -4,8 +4,27 @@
 
     
   <url>
+    <loc>http://shareong.me/Go-data-type.html</loc>
+    <lastmod>2017-09-12T07:50:39.308Z</lastmod>
+    <data>
+        <display>
+        <title>处理数据</title>
+        <pubTime>2017-09-11T16:00:00.000Z</pubTime>
+        
+        <tag>Go语言</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shareong.me/Go-language-structure.html</loc>
-    <lastmod>2017-09-12T02:52:43.153Z</lastmod>
+    <lastmod>2017-09-12T06:42:49.880Z</lastmod>
     <data>
         <display>
         <title>初识Go语言</title>
