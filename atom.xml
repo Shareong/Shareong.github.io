@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shareong.me/"/>
-  <updated>2017-09-12T06:42:49.880Z</updated>
+  <updated>2017-09-12T07:53:48.092Z</updated>
   <id>http://shareong.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://shareong.me/Go-language-structure.html"/>
     <id>http://shareong.me/Go-language-structure.html</id>
     <published>2017-09-11T16:00:00.000Z</published>
-    <updated>2017-09-12T06:42:49.880Z</updated>
+    <updated>2017-09-12T07:53:48.092Z</updated>
     
     <content type="html"><![CDATA[<p>　　Go语言由Google开发并开源，表达能力强，简洁高效，提供海量并发的支持，对于高性能分布式系统领域有更高的开发效率。Go语言已经成为云计算、云存储时代最重要的基础编程语言。</p>
 <h2 id="语言结构"><a href="#语言结构" class="headerlink" title="语言结构"></a>语言结构</h2><h3 id="基础组成"><a href="#基础组成" class="headerlink" title="基础组成"></a>基础组成</h3><p>　　包声明，引入包，函数，变量，语句&amp;表达式，注释</p>
@@ -52,7 +52,7 @@
     <link href="http://shareong.me/Go-data-type.html"/>
     <id>http://shareong.me/Go-data-type.html</id>
     <published>2017-09-11T16:00:00.000Z</published>
-    <updated>2017-09-12T07:50:39.308Z</updated>
+    <updated>2017-09-12T12:27:46.501Z</updated>
     
     <content type="html"><![CDATA[<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h3><p>布尔型的值只可以是常量 true 或者 false。</p>
 <h3 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h3><p>整型 int 和浮点型 float，Go 语言支持整型和浮点型数字，并且原生支持复数，其中位的运算采用补码。</p>
@@ -66,8 +66,13 @@
 <h3 id="多变量声明"><a href="#多变量声明" class="headerlink" title="多变量声明"></a>多变量声明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">var x, y int</div><div class="line">var (  // 这种因式分解关键字的写法一般用于声明全局变量</div><div class="line">    a int</div><div class="line">    b bool</div><div class="line">)</div><div class="line"></div><div class="line">var c, d int = 1, 2</div><div class="line">var e, f = 123, &quot;hello&quot;</div><div class="line"></div><div class="line">//这种不带声明格式的只能在函数体中出现</div><div class="line">//g, h := 123, &quot;hello&quot;</div><div class="line"></div><div class="line">func main()&#123;</div><div class="line">    g, h := 123, &quot;hello&quot;</div><div class="line">    println(x, y, a, b, c, d, e, f, g, h)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>执行结果为：0 0 0 false 1 2 123 hello 123 hello</p>
 <h3 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h3><p>值类型的变量的值存储在栈中，引用类型一般指向地址。</p>
-<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>Go代码25个关键字或保留字：<br>break, default, func, interface, select, case, defer, go, map, struct, chan, else, goto, package, switch, const, fallthrough, if, range, type, continue, for, import, return, var</p>
-<h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><p>在变量与运算符间加入空格，程序看起来更加美观<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fruit = apples + oranges</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>声明变量的一般形式是使用 const 关键字：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const identifier [type] = value</div></pre></td></tr></table></figure></p>
+<p>你可以省略类型说明符 [type]，因为编译器可以根据变量的值来推断其类型。<br>显式类型定义： const b string = “abc”<br>隐式类型定义： const b = “abc”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">   const LENGTH int = 10</div><div class="line">   const WIDTH int = 5   </div><div class="line">   var area int</div><div class="line">   const a, b, c = 1, false, &quot;str&quot; //多重赋值</div><div class="line"></div><div class="line">   area = LENGTH * WIDTH</div><div class="line">   fmt.Printf(&quot;面积为 : %d&quot;, area)</div><div class="line">   println()</div><div class="line">   println(a, b, c)   </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>常量还可以用作枚举：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const (</div><div class="line">    Unknown = 0</div><div class="line">    Female = 1</div><div class="line">    Male = 2</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>常量可以用len(), cap(), unsafe.Sizeof()常量计算表达式的值。常量表达式中，函数必须是内置函数，否则编译不过：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;unsafe&quot;</div><div class="line">const (</div><div class="line">    a = &quot;abc&quot;</div><div class="line">    b = len(a)</div><div class="line">    c = unsafe.Sizeof(a)</div><div class="line">)</div><div class="line"></div><div class="line">func main()&#123;</div><div class="line">    println(a, b, c)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="iota"><a href="#iota" class="headerlink" title="iota"></a>iota</h2><p>iota，特殊常量，可以认为是一个可以被编译器修改的常量。<br>在每一个const关键字出现时，被重置为0，然后再下一个const出现之前，每出现一次iota，其所代表的数字会自动增加1。<br>iota 可以被用作枚举值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">    const (</div><div class="line">            a = iota   //0</div><div class="line">            b          //1</div><div class="line">            c          //2</div><div class="line">            d = &quot;ha&quot;   //独立值，iota += 1</div><div class="line">            e          //&quot;ha&quot;   iota += 1</div><div class="line">            f = 100    //iota +=1</div><div class="line">            g          //100  iota +=1</div><div class="line">            h = iota   //7,恢复计数</div><div class="line">            i          //8</div><div class="line">    )</div><div class="line">    fmt.Println(a,b,c,d,e,f,g,h,i)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以上实例运行结果为：<br>0 1 2 ha ha 100 100 7 8</p>
 ]]></content>
     
     <summary type="html">
