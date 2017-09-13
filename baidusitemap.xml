@@ -4,11 +4,30 @@
 
     
   <url>
-    <loc>http://shareong.me/Go-data-type.html</loc>
-    <lastmod>2017-09-12T12:27:46.501Z</lastmod>
+    <loc>http://shareong.me/Go-branches-loops.html</loc>
+    <lastmod>2017-09-13T11:31:07.120Z</lastmod>
     <data>
         <display>
-        <title>处理数据</title>
+        <title>Go语言之分支和循环</title>
+        <pubTime>2017-09-12T16:00:00.000Z</pubTime>
+        
+        <tag>Go语言</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shareong.me/Go-data-type.html</loc>
+    <lastmod>2017-09-13T00:49:30.039Z</lastmod>
+    <data>
+        <display>
+        <title>Go语言之处理数据</title>
         <pubTime>2017-09-11T16:00:00.000Z</pubTime>
         
         <tag>Go语言</tag>

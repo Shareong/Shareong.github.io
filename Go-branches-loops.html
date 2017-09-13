@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shareong.me">
-  <title>仰望天空，云卷云舒 | Shareong</title>
+  <title>Go语言之分支和循环 | Shareong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天前，辛苦并快乐着闲步、听歌、耕耘书行今天前，关心朋友和亲人我有一扇窗户，仰望天空，云卷云舒今天前，为每一次不幸祷告祈愿以后我的幸福仁慈的父告诉我的我将告诉每一个不幸的人为每一捧风每一寸彩霞找一个惬意的归宿不相识的情侣，我也会祝福愿你们执手偕老愿你们有才人功成名就愿你们在阳光下沐浴幸福今天前，仰望天空，云卷云舒这样怀着希望明天，面朝大海，春暖花开   　　这是我中学时代模仿海子《面朝大海，春暖花">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="分支if else123if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; 12345if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; else &amp;#123;  /* 在布尔表达式为 false 时执行 */&amp;#125; swithchswitch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一">
+<meta name="keywords" content="Go语言,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="仰望天空，云卷云舒">
-<meta property="og:url" content="http://shareong.me/stargazing-leayh.html">
+<meta property="og:title" content="Go语言之分支和循环">
+<meta property="og:url" content="http://shareong.me/Go-branches-loops.html">
 <meta property="og:site_name" content="Shareong">
-<meta property="og:description" content="今天前，辛苦并快乐着闲步、听歌、耕耘书行今天前，关心朋友和亲人我有一扇窗户，仰望天空，云卷云舒今天前，为每一次不幸祷告祈愿以后我的幸福仁慈的父告诉我的我将告诉每一个不幸的人为每一捧风每一寸彩霞找一个惬意的归宿不相识的情侣，我也会祝福愿你们执手偕老愿你们有才人功成名就愿你们在阳光下沐浴幸福今天前，仰望天空，云卷云舒这样怀着希望明天，面朝大海，春暖花开   　　这是我中学时代模仿海子《面朝大海，春暖花">
-<meta property="og:image" content="http://ospmkbjow.bkt.clouddn.com/leayh.jpg?imageView2/2/w/1000/h/400/q/75|imageslim">
-<meta property="og:updated_time" content="2017-07-10T13:55:13.818Z">
+<meta property="og:description" content="分支if else123if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; 12345if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; else &amp;#123;  /* 在布尔表达式为 false 时执行 */&amp;#125; swithchswitch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一">
+<meta property="og:updated_time" content="2017-09-13T11:31:07.120Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="仰望天空，云卷云舒">
-<meta name="twitter:description" content="今天前，辛苦并快乐着闲步、听歌、耕耘书行今天前，关心朋友和亲人我有一扇窗户，仰望天空，云卷云舒今天前，为每一次不幸祷告祈愿以后我的幸福仁慈的父告诉我的我将告诉每一个不幸的人为每一捧风每一寸彩霞找一个惬意的归宿不相识的情侣，我也会祝福愿你们执手偕老愿你们有才人功成名就愿你们在阳光下沐浴幸福今天前，仰望天空，云卷云舒这样怀着希望明天，面朝大海，春暖花开   　　这是我中学时代模仿海子《面朝大海，春暖花">
-<meta name="twitter:image" content="http://ospmkbjow.bkt.clouddn.com/leayh.jpg?imageView2/2/w/1000/h/400/q/75|imageslim">
+<meta name="twitter:title" content="Go语言之分支和循环">
+<meta name="twitter:description" content="分支if else123if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; 12345if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; else &amp;#123;  /* 在布尔表达式为 false 时执行 */&amp;#125; swithchswitch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一">
   
     <link rel="alternative" href="/atom.xml" title="Shareong" type="application/atom+xml">
   
@@ -176,34 +174,41 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-stargazing-leayh" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Go-branches-loops" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      仰望天空，云卷云舒
+      Go语言之分支和循环
     </h1>
   
 
         
-        <a href="/stargazing-leayh.html" class="archive-article-date">
+        <a href="/Go-branches-loops.html" class="archive-article-date">
 
 	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
 &nbsp;&nbsp;</span>
-  	<time datetime="2017-07-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
+  	<time datetime="2017-09-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><center><br>今天前，辛苦并快乐着<br>闲步、听歌、耕耘书行<br>今天前，关心朋友和亲人<br>我有一扇窗户，仰望天空，云卷云舒<br>今天前，为每一次不幸祷告<br>祈愿以后我的幸福<br>仁慈的父告诉我的<br>我将告诉每一个不幸的人<br>为每一捧风每一寸彩霞找一个惬意的归宿<br>不相识的情侣，我也会祝福<br>愿你们执手偕老<br>愿你们有才人功成名就<br>愿你们在阳光下沐浴幸福<br>今天前，仰望天空，云卷云舒<br>这样<br>怀着希望<br>明天，面朝大海，春暖花开<br></center></p>
-<p><center><br><img src="http://ospmkbjow.bkt.clouddn.com/leayh.jpg?imageView2/2/w/1000/h/400/q/75|imageslim" alt="leayh"><br></center></p>
+        <h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if 布尔表达式 &#123;</div><div class="line">   /* 在布尔表达式为 true 时执行 */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if 布尔表达式 &#123;</div><div class="line">   /* 在布尔表达式为 true 时执行 */</div><div class="line">&#125; else &#123;</div><div class="line">  /* 在布尔表达式为 false 时执行 */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="swithch"><a href="#swithch" class="headerlink" title="swithch"></a>swithch</h3><p>switch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一的，从上直下逐一测试，直到匹配为止，匹配项后面也不需要再加break。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">   /* 定义局部变量 */</div><div class="line">   var grade string = &quot;B&quot;</div><div class="line">   var marks int = 90</div><div class="line"></div><div class="line">   switch marks &#123;</div><div class="line">      case 90: grade = &quot;A&quot;</div><div class="line">      case 80: grade = &quot;B&quot;</div><div class="line">      case 50,60,70 : grade = &quot;C&quot;</div><div class="line">      default: grade = &quot;D&quot;  </div><div class="line">   &#125;</div><div class="line"></div><div class="line">   switch &#123;</div><div class="line">      case grade == &quot;A&quot; :</div><div class="line">         fmt.Printf(&quot;优秀!\n&quot; )     </div><div class="line">      case grade == &quot;B&quot;, grade == &quot;C&quot; :</div><div class="line">         fmt.Printf(&quot;良好\n&quot; )      </div><div class="line">      case grade == &quot;D&quot; :</div><div class="line">         fmt.Printf(&quot;及格\n&quot; )      </div><div class="line">      case grade == &quot;F&quot;:</div><div class="line">         fmt.Printf(&quot;不及格\n&quot; )</div><div class="line">      default:</div><div class="line">         fmt.Printf(&quot;差\n&quot; );</div><div class="line">   &#125;</div><div class="line">   fmt.Printf(&quot;你的等级是 %s\n&quot;, grade );      </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p>select是Go中的一个控制结构，类似于用于通信的switch语句。每个case必须是一个通信操作，要么是发送要么是接收。<br>select随机执行一个可运行的case。如果没有case可运行，它将阻塞，直到有case可运行。一个默认的子句应该总是可运行的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">select &#123;</div><div class="line">    case communication clause  :</div><div class="line">       statement(s);      </div><div class="line">    case communication clause  :</div><div class="line">       statement(s); </div><div class="line">    /* 你可以定义任意数量的 case */</div><div class="line">    default : /* 可选 */</div><div class="line">       statement(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
-<p>　　这是我中学时代模仿海子《面朝大海，春暖花开》写的一篇日志，愿当时的那颗赤子之心能够陪伴我继续前行。</p>
-
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><p>Go语言的For循环有3中形式：<br>和 C 语言的 for 一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">for init; condition; post &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>和 C 的 while 一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">for condition &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>和 C 的 for(;;) 一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">v_name := value</div><div class="line"></div><div class="line">// 例如</div><div class="line">var a int = 10</div><div class="line">var b = 10</div><div class="line">c : = 10</div></pre></td></tr></table></figure></p>
+<p>for 循环的 range 格式可以对 slice、map、数组、字符串等进行迭代循环。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for key, value := range oldMap &#123;</div><div class="line">    newMap[key] = value</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line"></div><div class="line">	var a int = 15</div><div class="line">    var i int</div><div class="line">	</div><div class="line">	numbers := [6]int&#123;1,2,3,4&#125;</div><div class="line"></div><div class="line">	for i = 0; i &lt; 10; i++ &#123;</div><div class="line">		fmt.Printf(&quot;i = %d\n&quot;, i)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	for i &lt; a &#123;</div><div class="line">		i++</div><div class="line">		fmt.Printf(&quot;i = %d\n&quot;, i)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	for j, x := range numbers&#123;</div><div class="line">		fmt.Printf(&quot;numbers[%d] = %d\n&quot;, j, x)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -247,7 +252,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -303,7 +312,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.me/stargazing-leayh.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.me/Go-branches-loops.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +326,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/Go-data-type.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Go语言之处理数据
-        
-      </div>
-    </a>
   
-  
-    <a href="/Single-Number.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Single Number</div>
+    <a href="/Go-language-structure.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初识Go语言</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -343,7 +343,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="stargazing-leayh" style="padding: 0px 30px 0px 46px;"></div>
+  <div id="SOHUCS" sid="Go-branches-loops" style="padding: 0px 30px 0px 46px;"></div>
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cyt6jJh4G"; 
