@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://shareong.me/Go-data-type.html</loc>
+    
+    <lastmod>2017-09-14T12:05:28.189Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://shareong.me/Go-language-structure.html</loc>
     
     <lastmod>2017-09-14T12:03:43.801Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://shareong.me/Go-branches-loops.html</loc>
     
     <lastmod>2017-09-13T11:51:51.388Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://shareong.me/Go-data-type.html</loc>
-    
-    <lastmod>2017-09-13T00:49:30.039Z</lastmod>
     
   </url>
   

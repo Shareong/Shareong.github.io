@@ -1,7 +1,7 @@
 http://shareong.me/Go-function-scope.html
 http://shareong.me/Go-branches-loops.html
-http://shareong.me/Go-language-structure.html
 http://shareong.me/Go-data-type.html
+http://shareong.me/Go-language-structure.html
 http://shareong.me/stargazing-leayh.html
 http://shareong.me/Single-Number.html
 http://shareong.me/Mathjax-Introduction.html
