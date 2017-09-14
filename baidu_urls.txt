@@ -1,3 +1,4 @@
+http://shareong.me/Go-function-scope.html
 http://shareong.me/Go-branches-loops.html
 http://shareong.me/Go-language-structure.html
 http://shareong.me/Go-data-type.html

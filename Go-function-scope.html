@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shareong.me">
-  <title>Tag: Go语言 | Shareong</title>
+  <title>Go语言之函数与作用域 | Shareong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shareong">
-<meta property="og:url" content="http://shareong.me/tags/Go语言/index.html">
+  <meta name="description" content="函数定义格式123func function_name( [parameter list] ) [return_types] &amp;#123;   函数体&amp;#125; 返回多个值123456789101112package mainimport &amp;quot;fmt&amp;quot;func swap(x,  y string) (string, string) &amp;#123;	return y, x&amp;#125">
+<meta name="keywords" content="Go语言,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go语言之函数与作用域">
+<meta property="og:url" content="http://shareong.me/Go-function-scope.html">
 <meta property="og:site_name" content="Shareong">
+<meta property="og:description" content="函数定义格式123func function_name( [parameter list] ) [return_types] &amp;#123;   函数体&amp;#125; 返回多个值123456789101112package mainimport &amp;quot;fmt&amp;quot;func swap(x,  y string) (string, string) &amp;#123;	return y, x&amp;#125">
+<meta property="og:updated_time" content="2017-09-14T11:59:41.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shareong">
+<meta name="twitter:title" content="Go语言之函数与作用域">
+<meta name="twitter:description" content="函数定义格式123func function_name( [parameter list] ) [return_types] &amp;#123;   函数体&amp;#125; 返回多个值123456789101112package mainimport &amp;quot;fmt&amp;quot;func swap(x,  y string) (string, string) &amp;#123;	return y, x&amp;#125">
   
     <link rel="alternative" href="/atom.xml" title="Shareong" type="application/atom+xml">
   
@@ -169,39 +174,81 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Go-function-scope" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Go语言之函数与作用域
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go-function-scope.html" class="archive-article-date">
+
+        
+        <a href="/Go-function-scope.html" class="archive-article-date">
 
 	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
 &nbsp;&nbsp;</span>
   	<time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go-function-scope.html">Go语言之函数与作用域</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="定义格式"><a href="#定义格式" class="headerlink" title="定义格式"></a>定义格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func function_name( [parameter list] ) [return_types] &#123;</div><div class="line">   函数体</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="返回多个值"><a href="#返回多个值" class="headerlink" title="返回多个值"></a>返回多个值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func swap(x,  y string) (string, string) &#123;</div><div class="line">	return y, x</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main()&#123;</div><div class="line">	a, b := swap(&quot;first&quot;, &quot;last&quot;)</div><div class="line">	fmt.Println(a, b)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>结果为：last，first</p>
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><p>值传递：值传递是指在调用函数时将实际参数复制一份传递到函数中<br>引用传递：将实际参数的地址传递到函数中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line"></div><div class="line">   var a int = 100</div><div class="line">   var b int= 200</div><div class="line"></div><div class="line">   fmt.Printf(&quot;交换前，a 的值 : %d\n&quot;, a )</div><div class="line">   fmt.Printf(&quot;交换前，b 的值 : %d\n&quot;, b )</div><div class="line"></div><div class="line">   swap(&amp;a, &amp;b)</div><div class="line"></div><div class="line">   fmt.Printf(&quot;交换后，a 的值 : %d\n&quot;, a )</div><div class="line">   fmt.Printf(&quot;交换后，b 的值 : %d\n&quot;, b )</div><div class="line">&#125;</div><div class="line"></div><div class="line">func swap(x *int, y *int) &#123;</div><div class="line">   var temp int</div><div class="line">   temp = *x    </div><div class="line">   *x = *y      </div><div class="line">   *y = temp   </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果为：<br>交换前，a 的值 : 100<br>交换前，b 的值 : 200<br>交换后，a 的值 : 200<br>交换后，b 的值 : 100</p>
+<h3 id="函数作为值"><a href="#函数作为值" class="headerlink" title="函数作为值"></a>函数作为值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import (</div><div class="line">   &quot;fmt&quot;</div><div class="line">   &quot;math&quot;</div><div class="line">)</div><div class="line"></div><div class="line">func main()&#123;</div><div class="line">   /* 声明函数变量 */</div><div class="line">   getSquareRoot := func(x float64) float64 &#123;</div><div class="line">      return math.Sqrt(x)</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   /* 使用函数 */</div><div class="line">   fmt.Println(getSquareRoot(9))</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="函数闭包"><a href="#函数闭包" class="headerlink" title="函数闭包"></a>函数闭包</h3><p>Go 语言支持匿名函数，可作为闭包。匿名函数是一个”内联”语句或表达式。匿名函数的优越性在于可以直接使用函数内的变量，不必申明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func getSequence() func() int &#123;</div><div class="line">   i:=0</div><div class="line">   return func() int &#123;</div><div class="line">      i+=1</div><div class="line">     return i  </div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main()&#123;</div><div class="line">   /* nextNumber 为一个函数，函数 i 为 0 */</div><div class="line">   nextNumber := getSequence()  </div><div class="line"></div><div class="line">   /* 调用 nextNumber 函数，i 变量自增 1 并返回 */</div><div class="line">   fmt.Println(nextNumber())</div><div class="line">   fmt.Println(nextNumber())</div><div class="line">   fmt.Println(nextNumber())</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果： 1 2 3</p>
+<h3 id="函数方法"><a href="#函数方法" class="headerlink" title="函数方法"></a>函数方法</h3><p>方法就是指明了该函数的使用者，该使用者可以是命名类型或者结构体类型的一个值或者是一个指针。所有给定类型的方法属于该类型的方法集。语法格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">func (variable_name variable_data_type) function_name() [return_type]&#123;</div><div class="line">   /* 函数体*/</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;  </div><div class="line"></div><div class="line">/* 定义结构 */</div><div class="line">type Circle struct &#123;</div><div class="line">  radius float64</div><div class="line">&#125;</div><div class="line"></div><div class="line">//该 method 属于 Circle 类型对象中的方法</div><div class="line">func (c Circle) getArea() float64&#123;</div><div class="line">	//c.radius 即为 Circle 类型对象中的属性</div><div class="line">	return 3.14 * c.radius * c.radius</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	var c Circle</div><div class="line">	c.radius = 10.00</div><div class="line">	fmt.Println(&quot;Area of Circle(c) = &quot;, c.getArea())</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><p>全局变量与局部变量名称可以相同，但是函数内的局部变量会被优先考虑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">/* 声明全局变量 */</div><div class="line">var g int = 20</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">   /* 声明局部变量 */</div><div class="line">   var g int = 10</div><div class="line"></div><div class="line">   fmt.Printf (&quot;%d\n&quot;,  g)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果为：10</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://github.com/Shareong/Shareong.github.io/blob/master/img/alipay.jpg?raw=true">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://github.com/Shareong/Shareong.github.io/blob/master/img/wecaht.png?raw=true">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -217,155 +264,98 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.me/Go-function-scope.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go-branches-loops.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go-branches-loops.html">Go语言之分支与循环</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go-language-structure.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go-language-structure.html">初识Go语言</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go-data-type.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go-data-type.html">Go语言之处理数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/Go-branches-loops.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Go语言之分支与循环</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Go-function-scope" style="padding: 0px 30px 0px 46px;"></div>
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt6jJh4G"; 
+var conf = "d860aef897f648d43bba18cacb301860"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
 
+  
 
           </div>
         </div>
@@ -392,9 +382,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
