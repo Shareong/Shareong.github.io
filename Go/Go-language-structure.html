@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shareong.me">
-  <title>Go语言之分支与循环 | Shareong</title>
+  <title>初识Go语言 | Shareong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="分支if else123if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; 12345if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; else &amp;#123;  /* 在布尔表达式为 false 时执行 */&amp;#125; swithchswitch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一">
+  <meta name="description" content="Go语言由Google开发并开源，表达能力强，简洁高效，提供海量并发的支持，对于高性能分布式系统领域有更高的开发效率。Go语言已经成为云计算、云存储时代最重要的基础编程语言。 语言结构基础组成　　包声明，引入包，函数，变量，语句&amp;amp;表达式，注释 Hello World12345678package main    //源文件第一行代码必须声明包名import &amp;quot;fmt&amp;quot">
 <meta name="keywords" content="Go语言,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go语言之分支与循环">
-<meta property="og:url" content="http://shareong.me/Go-branches-loops.html">
+<meta property="og:title" content="初识Go语言">
+<meta property="og:url" content="http://shareong.me/Go/Go-language-structure.html">
 <meta property="og:site_name" content="Shareong">
-<meta property="og:description" content="分支if else123if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; 12345if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; else &amp;#123;  /* 在布尔表达式为 false 时执行 */&amp;#125; swithchswitch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一">
-<meta property="og:updated_time" content="2017-09-13T11:51:51.388Z">
+<meta property="og:description" content="Go语言由Google开发并开源，表达能力强，简洁高效，提供海量并发的支持，对于高性能分布式系统领域有更高的开发效率。Go语言已经成为云计算、云存储时代最重要的基础编程语言。 语言结构基础组成　　包声明，引入包，函数，变量，语句&amp;amp;表达式，注释 Hello World12345678package main    //源文件第一行代码必须声明包名import &amp;quot;fmt&amp;quot">
+<meta property="og:updated_time" content="2017-09-14T12:03:43.801Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Go语言之分支与循环">
-<meta name="twitter:description" content="分支if else123if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; 12345if 布尔表达式 &amp;#123;   /* 在布尔表达式为 true 时执行 */&amp;#125; else &amp;#123;  /* 在布尔表达式为 false 时执行 */&amp;#125; swithchswitch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一">
+<meta name="twitter:title" content="初识Go语言">
+<meta name="twitter:description" content="Go语言由Google开发并开源，表达能力强，简洁高效，提供海量并发的支持，对于高性能分布式系统领域有更高的开发效率。Go语言已经成为云计算、云存储时代最重要的基础编程语言。 语言结构基础组成　　包声明，引入包，函数，变量，语句&amp;amp;表达式，注释 Hello World12345678package main    //源文件第一行代码必须声明包名import &amp;quot;fmt&amp;quot">
   
     <link rel="alternative" href="/atom.xml" title="Shareong" type="application/atom+xml">
   
@@ -174,41 +174,39 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Go-branches-loops" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Go/Go-language-structure" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Go语言之分支与循环
+      初识Go语言
     </h1>
   
 
         
-        <a href="/Go-branches-loops.html" class="archive-article-date">
+        <a href="/Go/Go-language-structure.html" class="archive-article-date">
 
 	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
 &nbsp;&nbsp;</span>
-  	<time datetime="2017-09-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
+  	<time datetime="2017-09-12T07:53:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if 布尔表达式 &#123;</div><div class="line">   /* 在布尔表达式为 true 时执行 */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if 布尔表达式 &#123;</div><div class="line">   /* 在布尔表达式为 true 时执行 */</div><div class="line">&#125; else &#123;</div><div class="line">  /* 在布尔表达式为 false 时执行 */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="swithch"><a href="#swithch" class="headerlink" title="swithch"></a>swithch</h3><p>switch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一的，从上直下逐一测试，直到匹配为止，匹配项后面也不需要再加break。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">   /* 定义局部变量 */</div><div class="line">   var grade string = &quot;B&quot;</div><div class="line">   var marks int = 90</div><div class="line"></div><div class="line">   switch marks &#123;</div><div class="line">      case 90: grade = &quot;A&quot;</div><div class="line">      case 80: grade = &quot;B&quot;</div><div class="line">      case 50,60,70 : grade = &quot;C&quot;</div><div class="line">      default: grade = &quot;D&quot;  </div><div class="line">   &#125;</div><div class="line"></div><div class="line">   switch &#123;</div><div class="line">      case grade == &quot;A&quot; :</div><div class="line">         fmt.Printf(&quot;优秀!\n&quot; )     </div><div class="line">      case grade == &quot;B&quot;, grade == &quot;C&quot; :</div><div class="line">         fmt.Printf(&quot;良好\n&quot; )      </div><div class="line">      case grade == &quot;D&quot; :</div><div class="line">         fmt.Printf(&quot;及格\n&quot; )      </div><div class="line">      case grade == &quot;F&quot;:</div><div class="line">         fmt.Printf(&quot;不及格\n&quot; )</div><div class="line">      default:</div><div class="line">         fmt.Printf(&quot;差\n&quot; );</div><div class="line">   &#125;</div><div class="line">   fmt.Printf(&quot;你的等级是 %s\n&quot;, grade );      </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p>select是Go中的一个控制结构，类似于用于通信的switch语句。每个case必须是一个通信操作，要么是发送要么是接收。<br>select随机执行一个可运行的case。如果没有case可运行，它将阻塞，直到有case可运行。一个默认的子句应该总是可运行的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">select &#123;</div><div class="line">    case communication clause  :</div><div class="line">       statement(s);      </div><div class="line">    case communication clause  :</div><div class="line">       statement(s); </div><div class="line">    /* 你可以定义任意数量的 case */</div><div class="line">    default : /* 可选 */</div><div class="line">       statement(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>　　Go语言由Google开发并开源，表达能力强，简洁高效，提供海量并发的支持，对于高性能分布式系统领域有更高的开发效率。Go语言已经成为云计算、云存储时代最重要的基础编程语言。</p>
+<h2 id="语言结构"><a href="#语言结构" class="headerlink" title="语言结构"></a>语言结构</h2><h3 id="基础组成"><a href="#基础组成" class="headerlink" title="基础组成"></a>基础组成</h3><p>　　包声明，引入包，函数，变量，语句&amp;表达式，注释</p>
+<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">package main    //源文件第一行代码必须声明包名</div><div class="line"></div><div class="line">import &quot;fmt&quot;    //指明引入的包，fmt包实现了格式化IO</div><div class="line"></div><div class="line">func main() &#123;   //如果有init()函数则先执行该函数</div><div class="line">   /* 这是我的第一个简单的程序 */</div><div class="line">   fmt.Println(&quot;Hello, World!&quot;) //Println自动增加换行符</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><p>Go语言的For循环有3中形式：<br>和 C 语言的 for 一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">for init; condition; post &#123; &#125;</div></pre></td></tr></table></figure></p>
-<p>和 C 的 while 一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">for condition &#123; &#125;</div></pre></td></tr></table></figure></p>
-<p>和 C 的 for(;;) 一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">v_name := value</div><div class="line"></div><div class="line">// 例如</div><div class="line">var a int = 10</div><div class="line">var b = 10</div><div class="line">c : = 10</div></pre></td></tr></table></figure></p>
-<p>for 循环的 range 格式可以对 slice、map、数组、字符串等进行迭代循环。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for key, value := range oldMap &#123;</div><div class="line">    newMap[key] = value</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line"></div><div class="line">	var a int = 15</div><div class="line">    var i int</div><div class="line">	</div><div class="line">	numbers := [6]int&#123;1,2,3,4&#125;</div><div class="line"></div><div class="line">	for i = 0; i &lt; 10; i++ &#123;</div><div class="line">		fmt.Printf(&quot;i = %d\n&quot;, i)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	for i &lt; a &#123;</div><div class="line">		i++</div><div class="line">		fmt.Printf(&quot;i = %d\n&quot;, i)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	for j, x := range numbers&#123;</div><div class="line">		fmt.Printf(&quot;numbers[%d] = %d\n&quot;, j, x)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="Go标记"><a href="#Go标记" class="headerlink" title="Go标记"></a>Go标记</h3><p>Go程序可以由多个标记组成，可以是关键字，标识符，常量，字符串，符号。如以下GO 语句由6个标记组成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fmt.Println(&quot;Hello, World!&quot;)</div><div class="line"></div><div class="line">\\标记分别是：fmt, ., Println, (, &quot;Hello, World!&quot;, )</div></pre></td></tr></table></figure></p>
+<h3 id="行分隔符"><a href="#行分隔符" class="headerlink" title="行分隔符"></a>行分隔符</h3><p>在Go程序中，一行代表一个语句结束，不需要分隔符。 多个语句写在一行需要”;”区分，不建议使用。</p>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>标识符用来命名变量、类型等程序实体。一个标识符实际上就是一个或是多个字母(A~Z和a~z)数字(0~9)、下划线_组成的序列，但是第一个字符必须是字母或下划线而不能是数字。<code>当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，那么使用这种形式的标识符的对象就可以被外部包的代码所使用（客户端程序需要先导入这个包），这被称为导出（像面向对象语言中的 public）；标识符如果以小写字母开头，则对包外是不可见的，但是他们在整个包的内部是可见并且可用的（像面向对象语言中的 protected)。</code></p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>Go代码25个关键字或保留字：<br>break, default, func, interface, select, case, defer, go, map, struct, chan, else, goto, package, switch, const, fallthrough, if, range, type, continue, for, import, return, var</p>
+<h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><p>在变量与运算符间加入空格，程序看起来更加美观<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fruit = apples + oranges</div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -312,7 +310,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.me/Go-branches-loops.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.me/Go/Go-language-structure.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +324,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/Go-function-scope.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Go/Go-data-type.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Go语言之函数与作用域
+          Go语言之处理数据
         
       </div>
     </a>
   
   
-    <a href="/Go-data-type.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Go语言之处理数据</div>
+    <a href="/stargazing-leayh.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">仰望天空，云卷云舒</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -352,7 +350,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="Go-branches-loops" style="padding: 0px 30px 0px 46px;"></div>
+  <div id="SOHUCS" sid="Go/Go-language-structure" style="padding: 0px 30px 0px 46px;"></div>
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cyt6jJh4G"; 

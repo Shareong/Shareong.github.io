@@ -4,8 +4,8 @@
 
     
   <url>
-    <loc>http://shareong.me/Go-data-type.html</loc>
-    <lastmod>2017-09-14T12:05:28.189Z</lastmod>
+    <loc>http://shareong.me/Go/Go-data-type.html</loc>
+    <lastmod>2017-09-15T09:12:35.724Z</lastmod>
     <data>
         <display>
         <title>Go语言之处理数据</title>
@@ -23,7 +23,26 @@
 
     
   <url>
-    <loc>http://shareong.me/Go-language-structure.html</loc>
+    <loc>http://shareong.me/Go/Go-array-pointer-struct.html</loc>
+    <lastmod>2017-09-15T08:32:58.539Z</lastmod>
+    <data>
+        <display>
+        <title>Go语言之数组、指针、结构体</title>
+        <pubTime>2017-09-14T16:00:00.000Z</pubTime>
+        
+        <tag>Go语言</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shareong.me/Go/Go-language-structure.html</loc>
     <lastmod>2017-09-14T12:03:43.801Z</lastmod>
     <data>
         <display>
@@ -42,7 +61,7 @@
 
     
   <url>
-    <loc>http://shareong.me/Go-function-scope.html</loc>
+    <loc>http://shareong.me/Go/Go-function-scope.html</loc>
     <lastmod>2017-09-14T11:59:41.925Z</lastmod>
     <data>
         <display>
@@ -61,7 +80,7 @@
 
     
   <url>
-    <loc>http://shareong.me/Go-branches-loops.html</loc>
+    <loc>http://shareong.me/Go/Go-branches-loops.html</loc>
     <lastmod>2017-09-13T11:51:51.388Z</lastmod>
     <data>
         <display>
