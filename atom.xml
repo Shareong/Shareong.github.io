@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shareong.me/"/>
-  <updated>2017-09-16T03:24:00.075Z</updated>
+  <updated>2017-09-16T03:25:31.799Z</updated>
   <id>http://shareong.me/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>Go语言之切片</title>
     <link href="http://shareong.me/Go/Go-slice.html"/>
     <id>http://shareong.me/Go/Go-slice.html</id>
-    <published>2017-09-15T12:04:13.372Z</published>
-    <updated>2017-09-16T03:24:00.075Z</updated>
+    <published>2017-09-15T16:00:00.000Z</published>
+    <updated>2017-09-16T03:25:31.799Z</updated>
     
     <content type="html"><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h3 id="切片定义"><a href="#切片定义" class="headerlink" title="切片定义"></a>切片定义</h3><p>声明一个未指定大小的数组来定义切片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var identifier []type</div></pre></td></tr></table></figure></p>
 <p>使用make()函数创建切片S<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var slice_name []type = make([]type, len)</div><div class="line">//可简写为</div><div class="line">silce_name := make([]type, len)</div><div class="line">//可指定容量（可选参数）</div><div class="line">silce_name := make([]type, len, capacity)</div></pre></td></tr></table></figure></p>
