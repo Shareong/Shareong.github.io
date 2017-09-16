@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://shareong.me/Go/Go-data-type.html</loc>
-    <lastmod>2017-09-15T09:12:35.724Z</lastmod>
+    <loc>http://shareong.me/Go/Go-slice.html</loc>
+    <lastmod>2017-09-16T03:24:00.075Z</lastmod>
     <data>
         <display>
-        <title>Go语言之处理数据</title>
-        <pubTime>2017-09-12T12:00:00.000Z</pubTime>
+        <title>Go语言之切片</title>
+        <pubTime>2017-09-15T12:04:13.372Z</pubTime>
         
         <tag>Go语言</tag>
          
@@ -24,11 +24,30 @@
     
   <url>
     <loc>http://shareong.me/Go/Go-array-pointer-struct.html</loc>
-    <lastmod>2017-09-15T08:32:58.539Z</lastmod>
+    <lastmod>2017-09-15T12:03:31.496Z</lastmod>
     <data>
         <display>
         <title>Go语言之数组、指针、结构体</title>
         <pubTime>2017-09-14T16:00:00.000Z</pubTime>
+        
+        <tag>Go语言</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shareong.me/Go/Go-data-type.html</loc>
+    <lastmod>2017-09-15T09:14:26.676Z</lastmod>
+    <data>
+        <display>
+        <title>Go语言之处理数据</title>
+        <pubTime>2017-09-12T12:00:00.000Z</pubTime>
         
         <tag>Go语言</tag>
          
