@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shareong.me">
-  <title>Archives | Shareong</title>
+  <title>Go语言之range&amp;map | Shareong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shareong">
-<meta property="og:url" content="http://shareong.me/archives/index.html">
+  <meta name="description" content="range用于for循环中迭代数组(array)、切片(slice)、通道(channel)或集合(map)的元素。 实例123456789101112131415161718192021222324//这是我们使用range去求一个slice的和。使用数组跟这个很类似nums := []int&amp;#123;2, 3, 4&amp;#125;sum := 0for _, num := range nums">
+<meta name="keywords" content="Go语言,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go语言之range&amp;map">
+<meta property="og:url" content="http://shareong.me/Go/Go-range-map.html">
 <meta property="og:site_name" content="Shareong">
+<meta property="og:description" content="range用于for循环中迭代数组(array)、切片(slice)、通道(channel)或集合(map)的元素。 实例123456789101112131415161718192021222324//这是我们使用range去求一个slice的和。使用数组跟这个很类似nums := []int&amp;#123;2, 3, 4&amp;#125;sum := 0for _, num := range nums">
+<meta property="og:updated_time" content="2017-09-17T13:10:37.372Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shareong">
+<meta name="twitter:title" content="Go语言之range&amp;map">
+<meta name="twitter:description" content="range用于for循环中迭代数组(array)、切片(slice)、通道(channel)或集合(map)的元素。 实例123456789101112131415161718192021222324//这是我们使用range去求一个slice的和。使用数组跟这个很类似nums := []int&amp;#123;2, 3, 4&amp;#125;sum := 0for _, num := range nums">
   
     <link rel="alternative" href="/atom.xml" title="Shareong" type="application/atom+xml">
   
@@ -169,39 +174,74 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Go/Go-range-map" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Go语言之range&amp;map
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-range-map.html" class="archive-article-date">
+
+        
+        <a href="/Go/Go-range-map.html" class="archive-article-date">
 
 	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
 &nbsp;&nbsp;</span>
   	<time datetime="2017-09-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-range-map.html">Go语言之range&amp;map</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="range"><a href="#range" class="headerlink" title="range"></a>range</h2><p>用于for循环中迭代数组(array)、切片(slice)、通道(channel)或集合(map)的元素。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//这是我们使用range去求一个slice的和。使用数组跟这个很类似</div><div class="line">nums := []int&#123;2, 3, 4&#125;</div><div class="line">sum := 0</div><div class="line">for _, num := range nums &#123;</div><div class="line">    sum += num</div><div class="line">&#125;</div><div class="line"></div><div class="line">//在数组上使用range将传入index和值两个变量。上面那个例子我们不需要使用该元素的序号，所以我们使用空白符&quot;_&quot;省略了。有时侯我们确实需要知道它的索引。</div><div class="line">for i, num := range nums &#123;</div><div class="line">    if num == 3 &#123;</div><div class="line">        fmt.Println(&quot;index:&quot;, i)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//range也可以用在map的键值对上。</div><div class="line">kvs := map[string]string&#123;&quot;a&quot;: &quot;apple&quot;, &quot;b&quot;: &quot;banana&quot;&#125;</div><div class="line">for k, v := range kvs &#123;</div><div class="line">    fmt.Printf(&quot;%s -&gt; %s\n&quot;, k, v)</div><div class="line">&#125;</div><div class="line"></div><div class="line">//range也可以用来枚举Unicode字符串。第一个参数是字符的索引，第二个是字符（Unicode的值）本身。</div><div class="line">for i, c := range &quot;go&quot; &#123;</div><div class="line">    fmt.Println(i, c)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>Map是一种无序的键值对的集合，通过 key 来快速检索数据。Map是无序的，无法决定它的返回顺序，这是因为Map是使用hash表来实现的。</p>
+<h3 id="定义map"><a href="#定义map" class="headerlink" title="定义map"></a>定义map</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/* 声明变量，默认 map 是 nil */</div><div class="line">var map_variable map[key_data_type]value_data_type</div><div class="line"></div><div class="line">/* 使用 make 函数 */</div><div class="line">map_variable := make(map[key_data_type]value_data_type)</div></pre></td></tr></table></figure>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">   var countryCapitalMap map[string]string</div><div class="line">   /* 创建集合 */</div><div class="line">   countryCapitalMap = make(map[string]string)</div><div class="line">   </div><div class="line">   /* map 插入 key-value 对，各个国家对应的首都 */</div><div class="line">   countryCapitalMap[&quot;France&quot;] = &quot;Paris&quot;</div><div class="line">   countryCapitalMap[&quot;Italy&quot;] = &quot;Rome&quot;</div><div class="line">   countryCapitalMap[&quot;Japan&quot;] = &quot;Tokyo&quot;</div><div class="line">   countryCapitalMap[&quot;India&quot;] = &quot;New Delhi&quot;</div><div class="line">   </div><div class="line">   /* 使用 key 输出 map 值 */</div><div class="line">   for country := range countryCapitalMap &#123;</div><div class="line">      fmt.Println(&quot;Capital of&quot;,country,&quot;is&quot;,countryCapitalMap[country])</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   /* 查看元素在集合中是否存在 */</div><div class="line">   captial, ok := countryCapitalMap[&quot;United States&quot;]</div><div class="line">   /* 如果 ok 是 true, 则存在，否则不存在 */</div><div class="line">   if(ok)&#123;</div><div class="line">      fmt.Println(&quot;Capital of United States is&quot;, captial)  </div><div class="line">   &#125;else &#123;</div><div class="line">      fmt.Println(&quot;Capital of United States is not present&quot;) </div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="delete"><a href="#delete" class="headerlink" title="delete()"></a>delete()</h3><p>delete()函数用于删除集合的元素, 参数为map和其对应的 key。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://github.com/Shareong/Shareong.github.io/blob/master/img/alipay.jpg?raw=true">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://github.com/Shareong/Shareong.github.io/blob/master/img/wecaht.png?raw=true">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -217,417 +257,98 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://shareong.me/Go/Go-range-map.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-slice.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-slice.html">Go语言之切片</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-array-pointer-struct.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-array-pointer-struct.html">Go语言之数组、指针、结构体</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-function-scope.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-function-scope.html">Go语言之函数与作用域</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-branches-loops.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-branches-loops.html">Go语言之分支与循环</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-data-type.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-12T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-data-type.html">Go语言之处理数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Go/Go-language-structure.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-09-12T07:53:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Go/Go-language-structure.html">初识Go语言</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Go语言</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/stargazing-leayh.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-07-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/stargazing-leayh.html">仰望天空，云卷云舒</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Single-Number.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-07-06T11:24:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Single-Number.html">Single Number</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Coding</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Mathjax-Introduction.html" class="archive-article-date">
-
-	<span id="busuanzi_container_page_pv" style='display:none'> <i &nbsp; class="fa fa-eye" aria-hidden="true"></i> <span id="busuanzi_value_page_pv"></span>
-&nbsp;&nbsp;</span>
-  	<time datetime="2017-07-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Mathjax-Introduction.html">如何使用MathJax引擎在博客中插入数学公式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/Go/Go-slice.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Go语言之切片</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Go/Go-range-map" style="padding: 0px 30px 0px 46px;"></div>
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt6jJh4G"; 
+var conf = "d860aef897f648d43bba18cacb301860"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
 
+  
 
           </div>
         </div>
@@ -654,8 +375,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

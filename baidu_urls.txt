@@ -1,3 +1,4 @@
+http://shareong.me/Go/Go-range-map.html
 http://shareong.me/Go/Go-slice.html
 http://shareong.me/Go/Go-array-pointer-struct.html
 http://shareong.me/Go/Go-function-scope.html

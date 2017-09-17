@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://shareong.me/Go/Go-range-map.html</loc>
+    
+    <lastmod>2017-09-17T13:10:37.372Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://shareong.me/Go/Go-slice.html</loc>
     
-    <lastmod>2017-09-16T03:25:31.799Z</lastmod>
+    <lastmod>2017-09-16T03:26:38.350Z</lastmod>
     
   </url>
   

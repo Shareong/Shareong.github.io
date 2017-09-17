@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://shareong.me/Go/Go-slice.html">
 <meta property="og:site_name" content="Shareong">
 <meta property="og:description" content="初始化切片定义声明一个未指定大小的数组来定义切片1var identifier []type 使用make()函数创建切片S12345var slice_name []type = make([]type, len)//可简写为silce_name := make([]type, len)//可指定容量（可选参数）silce_name := make([]type, len, capacity)">
-<meta property="og:updated_time" content="2017-09-16T03:25:31.799Z">
+<meta property="og:updated_time" content="2017-09-16T03:26:38.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go语言之切片">
 <meta name="twitter:description" content="初始化切片定义声明一个未指定大小的数组来定义切片1var identifier []type 使用make()函数创建切片S12345var slice_name []type = make([]type, len)//可简写为silce_name := make([]type, len)//可指定容量（可选参数）silce_name := make([]type, len, capacity)">
@@ -204,7 +204,7 @@ var _hmt = _hmt || [];
 <h2 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h2><h3 id="len-和-cap"><a href="#len-和-cap" class="headerlink" title="len() 和 cap()"></a>len() 和 cap()</h3><p>len()获取长度 cap()测量容量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	numbers := make([]int, 3, 5)</div><div class="line">    fmt.Printf(&quot;%d, %d&quot;,len(numbers), cap(numbers))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>输出 3， 5</p>
 <h3 id="可用nil判断是否为空切片"><a href="#可用nil判断是否为空切片" class="headerlink" title="可用nil判断是否为空切片"></a>可用nil判断是否为空切片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s []int</div><div class="line">if( s == nil )</div></pre></td></tr></table></figure>
-<h3 id="append-和-copy"><a href="#append-和-copy" class="headerlink" title="append() 和 copy()"></a>append() 和 copy()</h3><p>append(s,v1,v2..)给S添加元素，返回新的切片<br>copy（s1,s2)拷贝s2给s1</p>
+<h3 id="append-和-copy"><a href="#append-和-copy" class="headerlink" title="append() 和 copy()"></a>append() 和 copy()</h3><p>append(s,v1,v2..)给S添加元素，返回新的切片<br>copy(s1,s2)拷贝s2给s1</p>
 
       
 
@@ -322,6 +322,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/Go/Go-range-map.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Go语言之range&amp;map
+        
+      </div>
+    </a>
   
   
     <a href="/Go/Go-array-pointer-struct.html" id="article-nav-older" class="article-nav-link-wrap">
